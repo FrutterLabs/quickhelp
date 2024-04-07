@@ -11,7 +11,7 @@ quickhelp.blobURL = null;
 quickhelp.SupportTicket = class SupportTicket {
 	constructor() {
 		if (!frappe.boot.quickhelp_support_enabled) {
-			frappe.msgprint(__("Ticket raising is not enabled for this site."));
+			frappe.msgprint(__("Support is not enabled for this site. Please contact Administrator."));
 			return;
 		}
 		this.init_config();
