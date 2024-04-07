@@ -12,6 +12,7 @@ app_license = "mit"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/quickhelp/css/quickhelp.css"
 # app_include_js = "/assets/quickhelp/js/quickhelp.js"
+app_include_js = ["quickhelp.bundle.js"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/quickhelp/css/quickhelp.css"
@@ -49,6 +50,9 @@ app_license = "mit"
 # 	"Role": "home_page"
 # }
 
+# Boot Info
+extend_bootinfo = "quickhelp.boot.set_bootinfo"
+
 # Generators
 # ----------
 
@@ -68,13 +72,17 @@ app_license = "mit"
 # ------------
 
 # before_install = "quickhelp.install.before_install"
-# after_install = "quickhelp.install.after_install"
+after_install = "quickhelp.install.after_install"
 
 # Uninstallation
 # ------------
 
 # before_uninstall = "quickhelp.uninstall.before_uninstall"
 # after_uninstall = "quickhelp.uninstall.after_uninstall"
+
+# Migration
+# ------------
+after_migrate = "quickhelp.setup.migrate.after_migrate"
 
 # Integration Setup
 # ------------------

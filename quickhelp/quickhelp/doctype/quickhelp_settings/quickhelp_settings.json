@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "creation": "2024-04-03 06:50:11.511163",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_ticket_raising",
+  "support_portal_section",
+  "support_url",
+  "save_recording",
+  "column_break_atib",
+  "support_api_token",
+  "max_recording_size",
+  "section_break_tazx",
+  "ticket_details"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_ticket_raising",
+   "fieldtype": "Check",
+   "label": "Enable Ticket Raising"
+  },
+  {
+   "depends_on": "enable_ticket_raising",
+   "fieldname": "support_portal_section",
+   "fieldtype": "Section Break",
+   "label": "Support Portal"
+  },
+  {
+   "description": "Example: https://support.frappe.io",
+   "fieldname": "support_url",
+   "fieldtype": "Data",
+   "label": "URL",
+   "mandatory_depends_on": "enable_ticket_raising"
+  },
+  {
+   "fieldname": "save_recording",
+   "fieldtype": "Select",
+   "label": "Save Recording",
+   "options": "Public\nPrivate"
+  },
+  {
+   "fieldname": "column_break_atib",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Format: api_key:api_secret",
+   "fieldname": "support_api_token",
+   "fieldtype": "Password",
+   "label": "API Token",
+   "mandatory_depends_on": "enable_ticket_raising"
+  },
+  {
+   "fieldname": "max_recording_size",
+   "fieldtype": "Int",
+   "label": "Max Recording Size(MB)"
+  },
+  {
+   "depends_on": "enable_ticket_raising",
+   "fieldname": "section_break_tazx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ticket_details",
+   "fieldtype": "Table",
+   "label": "Ticket Details",
+   "options": "QuickHelp Details"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-04-03 19:16:35.728826",
+ "modified_by": "Administrator",
+ "module": "QuickHelp",
+ "name": "QuickHelp Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
