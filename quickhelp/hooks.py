@@ -72,7 +72,7 @@ extend_bootinfo = "quickhelp.boot.set_bootinfo"
 # ------------
 
 # before_install = "quickhelp.install.before_install"
-after_install = "quickhelp.install.after_install"
+after_install = "quickhelp.setup.install.after_install"
 
 # Uninstallation
 # ------------
