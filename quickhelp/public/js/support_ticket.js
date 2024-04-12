@@ -21,7 +21,7 @@ quickhelp.SupportTicket = class SupportTicket {
 
 	setup_dialog() {
 		this.dialog = new frappe.ui.Dialog({
-			title: __("Support Ticket"),
+			title: __("Create Support Ticket"),
 			size: "large",
 			minimizable: true,
 			static: true,
@@ -139,6 +139,7 @@ quickhelp.SupportTicket = class SupportTicket {
 	}
 
 	async raise_ticket(values) {
+		console.log('Correct js')
 		console.log(this.inUpload)
 		if (this.inUpload) return;
 
@@ -154,7 +155,7 @@ quickhelp.SupportTicket = class SupportTicket {
 			if (!screen_recording) {
 				frappe.show_alert({
 					indicator: "red",
-					message: __("Error raising ticket. Please try again."),
+					message: __("Error Creating Ticket. Please try again."),
 				})
 				this.inUpload = false;
 				return;
@@ -162,11 +163,13 @@ quickhelp.SupportTicket = class SupportTicket {
 		}
 
 		this.inUpload = false;
+		
 		frappe.call({
 			method: "quickhelp.utils.support.create_ticket",
 			type: "POST",
 			args: {
 				"title": values.ticket_title,
+				'raised_by': frappe.session.user,
 				"ticket_module": values.ticket_module,
 				"description": values.ticket_description,
 				"screen_recording": screen_recording

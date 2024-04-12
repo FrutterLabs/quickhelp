@@ -12,7 +12,7 @@ class QuickHelpSettings(Document):
 		self.validate_sp_access()
 
 	def validate_sp_access(self):
-		if not self.enable_ticket_raising:
+		if not self.enable_ticket:
 			return
 
 		headers = {
