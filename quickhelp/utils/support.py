@@ -8,7 +8,7 @@ from quickhelp.utils.requests import make_request
 
 
 @frappe.whitelist()
-def create_ticket(title, ticket_module, description, screen_recording=None):
+def create_ticket(title, raised_by, ticket_module, description, screen_recording=None):
 	settings = frappe.get_cached_doc("QuickHelp Settings")
 	headers = {
 		"Authorization": f"token {settings.get_password('support_api_token')}",
@@ -29,6 +29,7 @@ def create_ticket(title, ticket_module, description, screen_recording=None):
 		payload={
 			"doc": {
 				"description": description,
+				"raised_by": raised_by,
 				"subject": title,
 				"custom_module": ticket_module,
 				**generate_ticket_details(settings),
