@@ -57,8 +57,7 @@
   {
    "depends_on": "enable_ticket",
    "fieldname": "section_break_tazx",
-   "fieldtype": "Section Break",
-   "hidden": 1
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "ticket_details",
@@ -75,7 +74,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2024-04-12 20:02:53.856811",
+ "modified": "2024-04-27 13:53:05.230241",
  "modified_by": "Administrator",
  "module": "QuickHelp",
  "name": "QuickHelp Settings",
