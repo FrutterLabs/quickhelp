@@ -6,3 +6,4 @@
 # Patches added in this section will be executed after doctypes are migrated
 quickhelp.patches.custom_field_file
 quickhelp.patches.update_support_menu
+quickhelp.patches.add_portal_menu
