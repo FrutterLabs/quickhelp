@@ -184,7 +184,7 @@ quickhelp.SupportTicket = class SupportTicket {
 					});
 					this.dialog.hide();
 					frappe.msgprint(
-						__(`Your ticket(#${r.message}) has been created successfully. Track your Ticket from Helpdesk Portal.`) 
+						__(`Your ticket(#${r.message}) has been created successfully. Track your Ticket from Support Portal.`) 
 
 					)
 				}
