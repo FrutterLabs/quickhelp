@@ -14,7 +14,7 @@ def execute():
             
     # Add a new row to the help_dropdown child table
     navbar_settings.append("help_dropdown", {
-        "item_label": "Open Helpdesk Portal",
+        "item_label": "Open Support Portal",
         "item_type": "Route",
         "route": "https://support.frutterlabs.com/helpdesk/my-tickets"
     })
