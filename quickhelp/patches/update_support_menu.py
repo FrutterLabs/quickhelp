@@ -18,11 +18,11 @@ def execute():
             help_item.hidden = 1
             
     # Add a new row to the help_dropdown child table
-    navbar_settings.append("help_dropdown", {
-        "item_label": "Frutter Support (Create Ticket)",
-        "item_type": "Action",
-        "action": "new quickhelp.SupportTicket()"
-    })
+    # navbar_settings.append("help_dropdown", {
+    #     "item_label": "Frutter Support (Create Ticket)",
+    #     "item_type": "Action",
+    #     "action": "new quickhelp.SupportTicket()"
+    # })
 
     # Save the changes
     navbar_settings.save()

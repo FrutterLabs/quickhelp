@@ -16,7 +16,7 @@ def execute():
     navbar_settings.append("help_dropdown", {
         "item_label": "Open Support Portal",
         "item_type": "Route",
-        "route": "https://support.frutterlabs.com/helpdesk/my-tickets"
+        "route": "https://support.frutterlabs.com"
     })
 
     # Save the changes
